@@ -1,0 +1,50 @@
+//Driver code
+#include <windows.h>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cstdlib>
+#include <fstream>
+#include <time.h>
+#include <stdio.h>
+using namespace std;
+ int displayresourcenamessagebox()
+{
+    int msgboxid = messagebox(
+        null,
+        (lpcwstr)l"wanna try?",
+        mb_iconwarning | mb_canceltrycontinue | mb_defbutton2
+    );
+
+    switch(msgboxid)
+    {
+    case idcancel:
+        exit(0);
+        break;
+    case idtryagain:
+        displayresourcenamessagebox();
+        break;
+    case idcontinue:
+        
+        break;
+    }
+
+    return msgboxid;
+}
+int main(){
+	{
+		string mystring;
+		ofstream myfile;
+        displayresourcenamessagebox();
+		int i =0;
+		do {
+			i++;
+			cout << " say?" << endl; 
+			myfile.open("c.txt",ios::app);
+			getline(cin,mystring);
+			myfile << mystring << endl;
+		} while(i!=5);
+		myfile.close();
+		return 0;}
+	
+}
