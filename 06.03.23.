@@ -1,0 +1,182 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+using namespace std;
+
+double sum() {
+	double num1, num2;
+	cout << "Ievadi 3 skaitles" << endl;
+	cin >> num1 >> num2;
+	return num1+ num2;
+
+}
+
+double quadr()
+{
+	double num1;
+	cout << "Ievadi 1 skaitli" << endl;
+	cin >> num1;
+	return num1 * num1;
+
+}
+
+void average()
+{
+	vector <double> n{ 1,2,3,4,5 };
+	cout << (n[0] + n[1] + n[2] + n[3] + n[4] / 5);
+
+}
+
+void even()
+{
+	vector <int> n{ 1,2,3,4,5,6,7,8,9 };
+	int i = 0;
+	do {
+		if (n[i] % 2 == 0)cout << n[i] << " ";
+		i++;
+	} while (i < n.size());
+
+}
+
+void prime()
+{
+	vector <int> p{ 2,3,7,11,13,17,19 };
+	int num1;
+	cout << "ievadi 1 skaitlu zem 20 kas ir pozitivs" << endl;
+	cin >> num1;
+	int i = 0; bool a = false;
+	do {
+		if (num1 == p[i]) { cout << "true"; a = true; }
+		i++;
+	} while (i < p.size());
+	if (a == false)cout << "false";
+}
+
+void squaresum()
+{
+	int k = 0;
+	vector <int> s;
+	do {
+		s.push_back(k);
+		k++;
+	} while (k < 1000000);
+	int i = 0, sum = 0;
+	do {
+		cout<< s[i] * s[i] << " ";
+		sum = sum + s[i] * s[i];
+		i++;
+	} while (i < s.size());
+
+}
+
+void poz()
+{
+	vector <int> pozit{ 1, -2, 3, -4, 5, 6, -7, 8, 9 };
+	int i = 0; bool a = false;
+	do {
+		if (pozit[i] > 0) cout << pozit[i] << " ";
+		i++;
+	} while (i < pozit.size());
+}
+
+void negat()
+{
+	vector <int> negat{ 1, -2, 3, -4, 5, 6, -7, 8, 9 };
+	int i = 0; bool a = false;
+	do {
+		if (negat[i] < 0) cout << negat[i] << " ";
+		i++;
+	} while (i > negat.size());
+}
+
+void vards()
+{
+	string var = "Hello";
+	int i = var.size();
+	do {
+		cout << var[i];
+		i--;
+	} while (i != -1);
+}
+
+void palindrome()
+{
+	string var = "racecar";
+    if (var[0]==var[6]&& var[1] == var [5]&& var [2] == var [4]);
+
+}
+
+vector <int> a(vector<int>k) {
+	return k;
+}
+
+double diff(){
+	double num1, num2;
+	cout << "ievadi 2 cip" << endl;
+	cin >> num1 ;
+	cin >> num2 ;
+	return num1 - num2;
+}
+
+void degIII()
+{
+	int num1;
+	cout << "ievadi cip" << endl;
+	cin >> num1;
+	cout << pow(num1, 3);
+}
+
+double xII() {
+	double num1;
+	cout << "ievadi cip" << endl;
+	cin >> num1;
+	return num1 * 2;
+}
+
+void InIIchk(){
+	vector <int> n{ 1,2,3,4,5,6,7,8,9,10 };
+	int i = 0;
+	do {
+		if (n[i] % 2 == 0) { cout << n[i];  cout << " para skaitlis" << endl; }
+		else { cout << n[i]; cout << " nepara skaitlis" << endl; }
+		i++;
+	} while (i < n.size());
+}
+void InIIchkdif() {
+	int num1;
+	int i = 0;
+	cout << "iev cip" << endl;
+	cin >> num1;
+	if (num1 % 2 == 0) { cout << num1;  cout << " para skaitlis" << endl; }
+	else { cout << num1; cout << " nepara skaitlis" << endl; }
+}
+
+void halfw() {
+	string word;
+	cout << "ievadi vardu" << endl;
+	cin >> word;
+	int i = 0;
+	do {
+		cout << word[i];
+		i++;
+	} while (i < (word.size() / 2));
+}
+
+
+int main() {
+	//cout << sum() << " " << quadr();
+	//average();
+	//even();
+	//squaresum();
+	//vards();
+	//vector<int> k{ 1, 2, 3 };
+	//cout << a(k)[0] << a(k)[1] << a(k)[2];
+	//cout << diff();
+	//degIII();
+	//cout << xII() << endl;
+	//InIIchk();
+	//InIIchkdif();
+	//halfw();
+
+}
+
